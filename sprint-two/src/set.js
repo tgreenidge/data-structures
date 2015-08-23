@@ -15,11 +15,11 @@ setPrototype.add = function(item){
 
 setPrototype.contains = function(item){
 //check to see if item is in storage
-for(var i = 0; i < this._storage.length; i++){
-  if(this._storage[i] === item){
-    return true; 
-  }  
-}
+  for(var i = 0; i < this._storage.length; i++){
+    if(this._storage[i] === item){
+      return true; 
+    }  
+  }
  return false;
 };
 

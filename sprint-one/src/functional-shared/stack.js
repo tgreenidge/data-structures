@@ -16,17 +16,17 @@ var stackMethods = {
   this.storage[this.count] = value; 
   this.count++;      
 }, 
-pop : function(){
-  if(this.count){
-    this.count--;
-  };
-  var result = this.storage[this.count];
-  delete this.storage[this.count];
-  return result;
-},
-size : function(){
-  return this.count;
-}
+  pop : function(){
+    if(this.count){
+      this.count--;
+    };
+    var result = this.storage[this.count];
+    delete this.storage[this.count];
+    return result;
+  },
+  size : function(){
+    return this.count;
+  }
 };
 
 

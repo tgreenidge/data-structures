@@ -10,23 +10,23 @@ var Queue = function() {
 var queueMethods = {};
 
 queueMethods.enqueue = function(value){
-    this.storage[this.count] = value;
-    this.count++;
-  },
+  this.storage[this.count] = value;
+  this.count++;
+},
 
 queueMethods.dequeue = function(){
-    if(this.count){
-      this.count--;
-    }
-     var result = this.storage[0];
-     var placeHolder;
-     for(var i = 0; i < this.count; i++){
-      placeHolder = this.storage[i+1];
-      this.storage[i] = placeHolder;
-     }
-    return result;
-  },
+  if(this.count){
+    this.count--;
+  }
+  var result = this.storage[0];
+  var placeHolder;
+  for(var i = 0; i < this.count; i++){
+    placeHolder = this.storage[i+1];
+    this.storage[i] = placeHolder;
+  }
+  return result;
+},
 
 queueMethods.size = function(){
-    return this.count;
-  }
+  return this.count;
+}

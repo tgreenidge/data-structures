@@ -1,0 +1,79 @@
+Complexity_Analysis_In_The_Real_World
+Computer Science
+August 20, 2015
+How does data volume(problem size) effect th time and space require by a particular algorithm?
+  algorithm = series of instructions to solve a problem
+  complexity analysis is done on algorithms
+
+  traveling salseman problem:
+    enumerate every route you could take and compare to all the others
+    ~other solutions?
+
+Space is cheap, time is expensive 
+
+Why is this important?
+  Complexity helps us understand and therefore improve the efficiency of our code
+  there are categories of complexity for algorithms & the goal is to get your algorithm into the best category 
+
+ex: look for a name in the phone book :
+  for-loop : terrible idea - would take forever looping through everything
+  change your solution to be a better category of solutions
+    ex2. loop through looking only at the left side pages & if you dont find it look through the right sides; does this change the category from the original? - NO - its just as bad because in the 1st we could say well we may find the name in the first 1/2 in which case its the same as ex2
+    ex3. if the name is greater than 'm' look only after 'm' if not look only at first half - this guarantees that we will only look at 1/2 of the book - better computational complexity 
+
+  A problem does not have a computational complexity - and algorithm for the problem has a computational complexity
+  
+Suppose you want to find the largest # in the list 
+larger the problem the longer it takes 
+
+** as the size(x-axis) gets bigger and bigger, the cost(y-axis) might grow quickly, slowly, or barely at all **
+
+approach # :
+  1. compare all numbers to all other numbers(each # to all other #s):
+        what is cost with the input size 0? 0
+        what is cost with the input size 3? 6
+        how will this grow ? - direct? double papers/double cost?
+                         double papers/a little over double cost?
+        it is this cost ** double papers/exponentially more cost?
+          ie. the marginal cost is getting higher and higher
+                (for 10 papers = 10squared/2)
+increasing marginal cost - polynomial
+decreasing marginal cost - logarthimic
+constant marginal cost - linear
+constant - doesn't change at all
+
+**exponential time - not operating at scale  - only run algorithm if its linear and try to improve it to logaritmic & then constant(but probs won't get there)
+
+**No user wants to use a website that's slower and slower when a new user signs up (think Twitter);
+
+We have not observed that as the internet grows in size that the time it takes to load a page has not changed -- google can sill give a page just as quickly 
+
+n = input size / for each input it compares to each other - 
+called handshake problem - # of handshakes grow with respect to a square  
+
+  best solution will be logarithmic -- 
+if you sort the list it costs nlogn(linear) & then grab the last element - its the highest
+
+Find largest and smallest first :
+  each step just asks am i smaller or larger? - larger ok again ? smaller ? ok hold the previous again ? lager ok hold this one as largest and the smallest one as smallest etc 
+  and then find the difference
+  if we know the set is sorted we go straight to the first element and the last element and find the difference 
+(Refer to Big-O notation graph in folder with this file to see diff in terms of Big-O notation)
+
+
+'I'm' paranoid about some of my boolean code because it looks quite linear? What are some algorithmic traps people fall into?
+  ~ look at an underbar question that is polynomial - unique - you loop over every value and use indexOf to determine if its there - this is polynomial ~ look at the way i did this vs the way the lecture on solutions did this 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

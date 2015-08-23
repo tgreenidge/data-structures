@@ -16,12 +16,12 @@ var Queue = function(){
     if(count){
       count --;
     }
-     var result = storage[0];
-     var placeHolder;
-     for(var i = 0; i < count; i++){
+    var result = storage[0];
+    var placeHolder;
+    for(var i = 0; i < count; i++){
       placeHolder = storage[i+1];
       storage[i] = placeHolder;
-     }
+    }
     return result;
   };
 
